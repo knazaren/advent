@@ -18,7 +18,7 @@ func TestReadInput(t *testing.T) {
 		wantInt []int64
 	}{
 		{name: "test1",
-			args:    args{filename: "./test_data/input.dat"},
+			args:    args{filename: "./test_data/input1.dat"},
 			want:    "1\n2\n3\n4",
 			wantInt: []int64{1, 2, 3, 4}},
 	}
