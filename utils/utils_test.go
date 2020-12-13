@@ -40,3 +40,9 @@ func TestReadInput(t *testing.T) {
 		})
 	}
 }
+
+func TestBoolToInt(t *testing.T) {
+	assert.Equal(t, 1, BoolToInt(true))
+	assert.Equal(t, 0, BoolToInt(false))
+
+}

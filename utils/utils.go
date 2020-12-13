@@ -29,3 +29,11 @@ func ReadInputAsInts(filename string) []int64 {
 	}
 	return inputInt
 }
+
+//BoolToInt simple conversion routine
+func BoolToInt(b bool) int {
+	if b {
+		return 1
+	}
+	return 0
+}
