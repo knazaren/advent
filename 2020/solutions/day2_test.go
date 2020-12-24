@@ -15,7 +15,7 @@ func TestReadDay2Pretest(t *testing.T) {
 	assert.Equal(t, true, got[2].match())
 }
 
-func TestDev2(t *testing.T) {
+func TestDay2(t *testing.T) {
 	got := readInputAsPasswords("../input/21.dat")
 	matched := 0
 
