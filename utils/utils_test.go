@@ -44,5 +44,9 @@ func TestReadInput(t *testing.T) {
 func TestBoolToInt(t *testing.T) {
 	assert.Equal(t, 1, BoolToInt(true))
 	assert.Equal(t, 0, BoolToInt(false))
+}
 
+func TestReadFileLines(t *testing.T) {
+	lines := ReadFileLines("../2020/test_data/day4_input.dat")
+	assert.Equal(t, 13, len(lines))
 }

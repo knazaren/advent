@@ -33,5 +33,5 @@ func TestDay3P2(t *testing.T) {
 		mult *= countTrees(slope[1], slope[0], treeLines, triesInLine)
 	}
 
-	fmt.Printf("Day3 task 2 result: %d\n", mult)
+	fmt.Printf("Day3 Part 2 result: %d\n", mult)
 }

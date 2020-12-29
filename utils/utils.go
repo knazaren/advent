@@ -1,8 +1,11 @@
 package utils
 
 import (
+	"bufio"
 	"bytes"
 	"io/ioutil"
+	"log"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -36,4 +39,23 @@ func BoolToInt(b bool) int {
 		return 1
 	}
 	return 0
+}
+
+//ReadFileLines reads all the lines from the file and returns them as []string
+func ReadFileLines(fileName string) []string {
+	var lines []string
+	file, err := os.Open(fileName)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		lines = append(lines, scanner.Text())
+	}
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+	return lines
 }
